@@ -2456,18 +2456,35 @@ table td:nth-child(3) {
 
 .kv {
     position: absolute;
-    top: 25px;
-    left: 0;
+    top: 0;
+    left: -400px;
     right: 0;
     margin: auto;
-    width: 100%;
-    height: 803px;
-    background: url(../img/kv.png) center 0 no-repeat;
-    background-size: 1366px;
+    width: 622px;
+    height: 600px;
+    background: url(../img/varnava1.png) center 0 no-repeat;
+    animation: 8s varnava infinite steps(1, end);
+}
+
+@keyframes varnava {
+    0% {
+        background: url(../img/varnava1.png) center 0 no-repeat;
+    }
+    33% {
+        background: url(../img/varnava2.png) center 0 no-repeat;
+    }
+    66% {
+        background: url(../img/varnava3.png) center 0 no-repeat;
+    }
+    100% {
+        background: url(../img/varnava1.png) center 0 no-repeat;
+    }
 }
 
 .action-info {
     max-width: 420px;
+    margin-left: auto;
+    margin-right: 50px;
     padding-top: 130px;
 }
 
@@ -2479,7 +2496,7 @@ table td:nth-child(3) {
 }
 
 .action-title {
-    width: 399px;
+    width: 413px;
     height: 197px;
     background: url(../img/kv-text.svg) center no-repeat;
     background-size: contain;
@@ -2654,13 +2671,13 @@ table td:nth-child(3) {
 }
 
 .prize-col {
-    max-width: 280px;
+    max-width: 500px;
     width: 100%;
     margin: 0 auto;
 }
 
-.prize-col:nth-child(2) {
-    max-width: 600px;
+.prize-col:nth-child(1) {
+    max-width: 700px;
 }
 
 .prize-col-title {
@@ -2680,15 +2697,20 @@ table td:nth-child(3) {
 }
 
 .prize {
-    max-width: 280px;
+    max-width: 340px;
     width: 100%;
     margin: 0 auto;
+    text-align: center;
+}
+
+.prize3 {
+    max-width: 500px;
 }
 
 .prize-img {
     position: relative;
-    height: 180px;
-    margin: 0 auto 50px;
+    height: 220px;
+    margin: 0 auto;
 }
 
 .prize-img::before {
@@ -2697,13 +2719,16 @@ table td:nth-child(3) {
     top: 0;
     left: 0;
     right: 0;
-    bottom: 0;
     margin: auto;
-    width: 180px;
-    height: 180px;
+    width: 200px;
+    height: 200px;
     background: linear-gradient(235.93deg, #FFFFFF 16.19%, #FFE686 63.74%, #F7B545 106.56%);
     border-radius: 100px;
     z-index: 0;
+}
+
+.prize3 .prize-img::before {
+    display: none;
 }
 
 .prize1 .prize-img img {
@@ -2716,25 +2741,17 @@ table td:nth-child(3) {
 
 .prize2 .prize-img img {
     position: absolute;
-    top: -32px;
-    left: -16px;
-    right: -25px;
+    top: -80px;
+    left: -65px;
+    right: -79px;
     margin: auto;
 }
 
 .prize3 .prize-img img {
     position: absolute;
-    top: -32px;
+    top: -100px;
     left: -26px;
     right: -34px;
-    margin: auto;
-}
-
-.prize4 .prize-img img {
-    position: absolute;
-    top: -25px;
-    left: -17px;
-    right: -14px;
     margin: auto;
 }
 
@@ -2751,40 +2768,55 @@ table td:nth-child(3) {
 
 .prize-text {
     font-weight: 500;
-    font-size: 16px;
-    line-height: 20px;
+    font-size: 21px;
+    line-height: 24px;
     text-align: center;
+    text-transform: uppercase;
+    background: linear-gradient(235.93deg, #FFFFFF 16.19%, #FFE686 63.74%, #F7B545 106.56%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 30px;
 }
 
 .prize-text span {
     font-weight: 900;
 }
 
-.prize-text a {
+.places-link {
     color: #EB2316;
     text-transform: uppercase;
 }
 
+.main-dust {
+    position: absolute;
+    top: -600px;
+    right: 0;
+    width: 674px;
+    height: 1028px;
+    background: url(../img/main-dust.png) center no-repeat;
+    background-size: contain;
+}
+
 .main-decor1 {
     position: absolute;
-    top: -70px;
-    left: -1300px;
+    top: -210px;
+    left: -900px;
     right: 0;
     margin: auto;
-    width: 105px;
-    height: 105px;
+    width: 436px;
+    height: 302px;
     background: url(../img/main-decor1.png) center no-repeat;
     background-size: contain;
 }
 
 .main-decor2 {
     position: absolute;
-    top: -100px;
+    top: -240px;
     left: 0;
-    right: -1100px;
+    right: -1200px;
     margin: auto;
-    width: 229px;
-    height: 202px;
+    width: 268px;
+    height: 268px;
     background: url(../img/main-decor2.png) center no-repeat;
     background-size: contain;
 }
@@ -2792,23 +2824,23 @@ table td:nth-child(3) {
 .main-decor3 {
     position: absolute;
     top: -160px;
-    left: -800px;
+    left: -1000px;
     right: 0;
     margin: auto;
-    width: 461px;
-    height: 276px;
+    width: 287px;
+    height: 308px;
     background: url(../img/main-decor3.png) center no-repeat;
     background-size: contain;
 }
 
 .main-decor4 {
     position: absolute;
-    top: -70px;
+    top: -230px;
     left: 0;
-    right: -950px;
+    right: -1150px;
     margin: auto;
-    width: 232px;
-    height: 193px;
+    width: 131px;
+    height: 317px;
     background: url(../img/main-decor4.png) center no-repeat;
     background-size: contain;
 }
@@ -3603,7 +3635,7 @@ table td:nth-child(3) {
     }
 
     .action-title {
-        width: 252px;
+        width: 261px;
         height: 126px;
         background: url(../img/kv-text-mob.svg) center no-repeat;
         background-size: contain;
