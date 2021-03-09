@@ -2395,7 +2395,7 @@ table td:nth-child(3) {
 .box-img::before {
     content: '';
     position: absolute;
-    top: -100px;
+    top: -30px;
     left: -100px;
     right: -100px;
     margin: auto;
@@ -2405,6 +2405,7 @@ table td:nth-child(3) {
     background-size: contain;
     mix-blend-mode: lighten;
     z-index: 0;
+    opacity: .3;
 }
 
 .box-title {
@@ -2649,7 +2650,7 @@ table td:nth-child(3) {
     width: 100%;
     height: 1000px;
     background: url(../img/bg-inner.jpg) center 0 no-repeat;
-    background-size: 100%;
+    background-size: 100% 100%;
     z-index: -1;
 }
 
@@ -2776,10 +2777,6 @@ table td:nth-child(3) {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     margin-bottom: 30px;
-}
-
-.prize-text span {
-    font-weight: 900;
 }
 
 .places-link {
@@ -3062,14 +3059,25 @@ table td:nth-child(3) {
     .lk-decor2 {
         right: -850px;
     }
-
-    .kv {
-        background-position: 20px 0;
+    
+    .main-dust {
+        right: -50px;
     }
 
-    .inst-label {
-        left: 900px;
-        right: auto;
+    .main-decor2 {
+        right: -1050px;
+    }
+
+    .main-decor4 {
+        right: -900px;
+    }
+
+    .prize-col {
+        max-width: 350px;
+    }
+
+    .box-img::before {
+        transform: scale(.8);
     }
 }
 
@@ -3616,14 +3624,17 @@ table td:nth-child(3) {
 
     .main-block {
         min-height: 675px;
-        background: url(../img/bg-main-mob.jpg) center 0 no-repeat;
+        background: url(../img/bg-main-mob.jpg) center -330px no-repeat;
         background-size: 100% 1005px;
     }
 
     .kv {
-        height: 731px;
-        background: url(../img/kv-mob.png) center 0 no-repeat;
-        background-size: 492px;
+        top: 300px;
+        left: -50px;
+        right: -50px;
+        width: 400px;
+        height: 400px;
+        background-size: contain !important;
     }
 
     .action-info {
@@ -3632,6 +3643,7 @@ table td:nth-child(3) {
         -ms-align-items: center;
         align-items: center;
         padding-top: 80px;
+        margin: auto;
     }
 
     .action-title {
@@ -3669,6 +3681,7 @@ table td:nth-child(3) {
 
     .steps {
         flex-direction: column;
+        margin-top: 30px;
     }
 
     .step1 {
@@ -3685,6 +3698,7 @@ table td:nth-child(3) {
 
     .prizes-block::before {
         height: 1900px;
+        background: url(../img/bg-prizes-mob.jpg) center 0 no-repeat;
         background-size: 100% 100%;
     }
 
@@ -3711,49 +3725,70 @@ table td:nth-child(3) {
         margin-bottom: 40px;
     }
 
-    .prize-img {
-        margin-bottom: 20px;
+    .prize3 .prize-img {
+        height: 260px;
+    }
+
+    .prize3 .prize-img img {
+        top: -70px;
+    }
+
+    .main-decor1-mob {
+        position: absolute;
+        top: -30px;
+        left: -75px;
+        right: -50px;
+        margin: auto;
+        width: 379px;
+        height: 177px;
+        background: url(../img/main-decor01-mob.png) center no-repeat;
+        background-size: contain;
     }
 
     .main-decor1 {
-        top: -15px;
-        left: -300px;
-        width: 69px;
-        height: 69px;
+        top: -140px;
+        left: -210px;
+        width: 182px;
+        height: 196px;
+        background: url(../img/main-decor1-mob.png) center no-repeat;
+        background-size: contain;
     }
 
-    .steps-block .main-decor6-mob {
-        position: absolute;
-        top: 200px;
-        left: 0;
-        right: -300px;
-        margin: auto;
-        width: 86px;
-        height: 98px;
-        background: url(../img/main-decor6-mob.png) center no-repeat;
+    .main-decor2 {
+        top: -120px;
+        right: -320px;
+        width: 72px;
+        height: 142px;
+        background: url(../img/main-decor2-mob.png) center no-repeat;
         background-size: contain;
     }
 
     .main-decor3 {
         top: -130px;
-        left: -20px;
-        right: -20px;
-        width: 325px;
-        height: 195px;
+        left: -50px;
+        right: -50px;
+        width: 324px;
+        height: 192px;
+        background: url(../img/main-decor3-mob.png) center no-repeat;
+        background-size: contain;
     }
 
     .main-decor4 {
-        top: 190px;
-        right: -350px;
-        width: 155px;
-        height: 129px;
+        top: 380px;
+        left: -300px;
+        right: 0;
+        width: 93px;
+        height: 228px;
+        background: url(../img/main-decor4-mob.png) center no-repeat;
+        background-size: contain;
     }
 
     .main-decor5 {
-        top: 580px;
-        left: -340px;
-        width: 92px;
-        height: 221px;
+        top: 510px;
+        left: 0;
+        right: -310px;
+        width: 75px;
+        height: 91px;
         background: url(../img/main-decor5-mob.png) center no-repeat;
         background-size: contain;
     }
@@ -3798,7 +3833,10 @@ table td:nth-child(3) {
 }
 
 @media (max-width: 375px) {
-	
+	.main-block {
+        background-position: center 0;
+        background-size: cover;
+    }
 }
 
 @media (max-width: 360px) {
