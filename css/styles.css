@@ -2464,10 +2464,10 @@ table td:nth-child(3) {
     width: 622px;
     height: 600px;
     background: url(../img/varnava1.png) center 0 no-repeat;
-    animation: 8s varnava infinite steps(1, end);
+    animation: 6s varnava infinite steps(1, end);
 }
 
-@keyframes varnava {
+/*@keyframes varnava {
     0% {
         background: url(../img/varnava1.png) center 0 no-repeat;
     }
@@ -2476,6 +2476,18 @@ table td:nth-child(3) {
     }
     66% {
         background: url(../img/varnava4.png) center 0 no-repeat;
+    }
+    100% {
+        background: url(../img/varnava1.png) center 0 no-repeat;
+    }
+}*/
+
+@keyframes varnava {
+    0% {
+        background: url(../img/varnava1.png) center 0 no-repeat;
+    }
+    50% {
+        background: url(../img/varnava2.png) center 0 no-repeat;
     }
     100% {
         background: url(../img/varnava1.png) center 0 no-repeat;
